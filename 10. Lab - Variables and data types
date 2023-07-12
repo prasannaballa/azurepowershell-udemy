@@ -1,0 +1,32 @@
+$x = 10
+$Y = 20
+
+$x
+$Y
+'The value of x is ' + $x
+'The vale of y is ' + $y
+
+"The value of x is $x"
+"The vale of y is $y"
+$z = $x +$y
+$z
+$CourseName = "Azure Powershell"
+" The name of this course is $CourseName "
+
+$x.GetType()
+$CourseName.GetType()
+
+# output
+10
+20
+The value of x is 10
+The vale of y is 20 
+The value of x is 10
+The vale of y is 20 
+30
+ The name of this course is Azure Powershell
+
+IsPublic IsSerial Name                                     BaseType        
+-------- -------- ----                                     --------        
+True     True     Int32                                    System.ValueTy… 
+True     True     String                                   System.Objec
