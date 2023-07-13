@@ -1,0 +1,40 @@
+# custom objects
+$course = [PSCustomObject]@{
+    Id = 1 
+    Name = 'AZ-104 Azure Adminstrator'
+    Rating = 4.7
+
+}
+$course
+'The Course Id is ' + $course.Id
+
+$courseList = @(
+     [PSCustomObject]@{
+        Id = 1 
+        Name = 'AZ-104 Azure Adminstrator'
+        Rating = 4.7
+    },
+     [PSCustomObject]@{
+        Id = 2
+        Name = 'AZ-305 Azure Architect Design'
+        Rating = 4.8
+    },
+    [PSCustomObject]@{
+        Id = 1 
+        Name = 'AZ-500 Azure Security'
+        Rating = 4.9
+    }
+)
+$courseList
+$courseList[0].Name
+
+# outputs here
+
+Id Name                          Rating
+-- ----                          ------
+ 1 AZ-104 Azure Adminstrator       4.70
+The Course Id is 1
+ 1 AZ-104 Azure Adminstrator       4.70
+ 2 AZ-305 Azure Architect Design   4.80
+ 1 AZ-500 Azure Security           4.90
+AZ-104 Azure Adminstrator
