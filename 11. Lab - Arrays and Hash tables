@@ -1,0 +1,57 @@
+$Coursevideos = 'Introduction','Installation','Variables'
+
+$Coursevideos
+$CourseNumbers = 1,2,3
+$CourseNumbers
+
+$Coursevideos_1 =@(
+    'Introduction'
+    'Installation'
+    'Variables'
+)
+$Coursevideos_1
+$Coursevideos_1[0]
+$Coursevideos_1[1] = 'Configuration'
+$Coursevideos_1
+
+# Hash tables
+# key/values -- Comments
+$serverNames = @{
+            Devlopment= 'server01'
+            Testing = 'server02'
+            Production = 'server03'
+}
+$serverNames['Devlopment']
+$serverNames.Devlopment
+$serverNames.Add('QA','server04')
+$serverNames
+
+# outputs = collection of values 
+
+
+
+PS C:\Users\balla.kumar\Documents\Prasanna\powershell> . 'C:\Users\balla.kumar\Documents\Prasanna\powershell\3.Lab - Arrays and Hash tables\scrpit.ps1'
+Introduction
+Installation
+Variables
+1
+2
+3
+Introduction
+Installation
+Variables
+Introduction
+Introduction
+Configuration
+Variables
+server01
+server01
+
+Name                           Value
+----                           -----
+QA                             server04
+Production                     server03
+Testing                        server02
+Devlopment                     server01
+
+PS C:\Users\balla.kumar\Documents\Prasanna\powershell>
