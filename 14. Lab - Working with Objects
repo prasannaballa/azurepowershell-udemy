@@ -1,0 +1,99 @@
+$Mobile = @(
+    [PSCustomObject]@{
+        Brand       = "Samsung"
+        Model       = "Galaxy Pro"
+        storag      = @("128GB", "256GB", "512GB") # USING ARRY
+        colors      = @("white", "blue", "gray")
+        Defaultapps = @(
+            @{
+                Name    = "Assist App"
+                status  = "Installed"
+                version = 1.0
+
+            },
+            @{
+                Name    = "Browser App"
+                status  = "Installed"
+                version = 2.0
+
+            }
+        )
+    },
+    [PSCustomObject]@{
+        Brand       = "Samsung"
+        Model       = "Galaxy Ultra"
+        storag      = @("128GB", "256GB", "512GB") # USING ARRY
+        colors      = @("white", "blue", "gray")
+        Defaultapps = @(
+            @{
+                Name    = "Assist App"
+                status  = "Installed"
+                version = 1.0
+
+            },
+            @{
+                Name    = "Browser App"
+                status  = "Installed"
+                version = 2.0
+
+            }
+        )
+     }
+)
+
+$Mobile
+$Mobile[0]
+
+$Mobile | Where-Object {$_.Model -eq "Galaxy Ultra"}  
+| Select-Object -Property Model,storag
+$Mobile[0].storag[0]
+$Mobile[0].Defaultapps.Item(0)
+
+foreach($app in $Mobile[0].Defaultapps)
+{
+    $app.version
+    $app.Name
+    $app.status
+}
+
+# output here
+Brand       : Samsung
+Model       : Galaxy Pro
+storag      : {128GB, 256GB, 512GB}
+colors      : {white, blue, gray}
+Defaultapps : {Assist App, Browser App}
+
+Brand       : Samsung
+Model       : Galaxy Ultra
+storag      : {128GB, 256GB, 512GB}
+colors      : {white, blue, gray}
+Defaultapps : {Assist App, Browser App}
+
+Brand       : Samsung
+Model       : Galaxy Pro
+storag      : {128GB, 256GB, 512GB}
+colors      : {white, blue, gray}
+Defaultapps : {Assist App, Browser App}
+
+Model  : Galaxy Ultra
+storag : {128GB, 256GB, 512GB}
+
+128GB
+Key   : status
+Value : Installed
+Name  : status
+
+Key   : version
+Value : 1
+Name  : version
+
+Key   : Name
+Value : Assist App
+Name  : Name
+
+1
+Assist App
+Installed
+2
+Browser App
+Installed
