@@ -1,0 +1,89 @@
+$Numberofvideos = 30
+
+if ($Numberofvideos-ge 20)
+{
+    "Greater or equal to 20"
+}
+else {
+    "Less than 20"
+}
+
+# While statments
+$i = 1
+while($i -le 10)
+{
+    $i
+    ++$i
+}
+
+# for statements
+for($i =1; $i -le 10; ++$i)
+{
+    $i
+}
+
+# for each
+$Coursevideos = 'Introduction','Installation','variables'
+foreach($Course in $Coursevideos)
+{
+    $Course
+}
+# 
+$courseList = @(
+     [PSCustomObject]@{
+        Id = 1 
+        Name = 'AZ-104 Azure Adminstrator'
+        Rating = 4.7
+    },
+     [PSCustomObject]@{
+        Id = 2
+        Name = 'AZ-305 Azure Architect Design'
+        Rating = 4.8
+    },
+    [PSCustomObject]@{
+        Id = 3
+        Name = 'AZ-500 Azure Security'
+        Rating = 4.9
+    }
+)
+foreach($course in $courseList)
+{
+     $Course.Id
+     $Course.Name
+     $Course.Rating 
+}
+
+# output here
+Greater or equal to 20
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Introduction
+Installation
+variables
+1
+AZ-104 Azure Adminstrator
+4.7
+2
+AZ-305 Azure Architect Design
+4.8
+3
+AZ-500 Azure Security
+4.9
