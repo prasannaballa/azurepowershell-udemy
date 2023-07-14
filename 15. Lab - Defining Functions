@@ -1,0 +1,70 @@
+# Functiions
+
+function Get-Appversion {
+    $PSVersionTable
+}
+
+Get-Appversion
+
+function Add-Integers([int]$x, [int]$y) {
+    'The sum of the Integers is ' + ($x + $y)
+
+}
+Add-Integers 10 20
+
+function Get-Course {
+    param (
+        [Object[]] $courseList
+    )
+
+    foreach ($course in $courseList) {
+        $Course.Id
+        $Course.Name
+        $Course.Rating 
+    }
+
+    
+}
+$courseList = @(
+    [PSCustomObject]@{
+        Id     = 1 
+        Name   = 'AZ-104 Azure Adminstrator'
+        Rating = 4.7
+    },
+    [PSCustomObject]@{
+        Id     = 2
+        Name   = 'AZ-305 Azure Architect Design'
+        Rating = 4.8
+    },
+    [PSCustomObject]@{
+        Id     = 3
+        Name   = 'AZ-500 Azure Security'
+        Rating = 4.9
+    }
+)
+
+
+Get-Course $courseList
+
+# output here 
+    Name                           Value
+----                           -----
+PSVersion                      7.3.5
+PSEdition                      Core 
+GitCommitId                    7.3.5
+OS                             Microsoft Windows 10.0.19045
+Platform                       Win32NT
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+The sum of the Integers is 30
+1
+AZ-104 Azure Adminstrator
+4.7
+2
+AZ-305 Azure Architect Design
+4.8
+3
+AZ-500 Azure Security
+4.9
